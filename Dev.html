@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Rodrigo Bernardo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bcd4;
+      box-shadow: 0 0 20px #00bcd4;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #00bcd4;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    .typing {
+      border-right: 2px solid #00bcd4;
+      animation: blink 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    section {
+      width: 100%;
+      max-width: 900px;
+      margin-top: 50px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #00bcd4;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+
+    .card h3 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* ==== Seções Detalhadas ==== */
+    .detalhes {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 40px;
+      line-height: 1.6;
+      color: #ddd;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .detalhes.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .detalhes h3 {
+      color: #00bcd4;
+      margin-bottom: 15px;
+    }
+
+    .detalhes ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .detalhes li::before {
+      content: "⚙️ ";
+    }
+
+    .detalhes a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .detalhes a:hover {
+      text-decoration: underline;
+    }
+
+    .scroll-link {
+      color: #00bcd4;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .scroll-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <img src="rodrigo.jpg" alt="Foto de Rodrigo Bernardo">
+  <h1>Rodrigo Bernardo</h1>
+  <h2 id="typing"></h2>
+
+  <div class="social-links">
+    <a href="https://w.app/g9p0r1" target="_blank">WhatsApp</a> |
+    <a href="https://github.com/l30ur1n3/" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/rodrigo-bernardo-7a9b30195/" target="_blank">LinkedIn</a>
+  </div>
+
+  <section class="projetos">
+    <h2>💻 Projetos Recentes</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Site Portfólio</h3>
+        <p>Um site moderno e responsivo feito com HTML, CSS e JS. Demonstra habilidades de front-end e design.</p>
+        <span class="scroll-link" data-target="detalhes-portfolio">Ver mais detalhes ↓</span>
+      </div>
+
+      <div class="card">
+        <h3>API Node.js</h3>
+        <p>API RESTful com Express e MongoDB, incluindo autenticação JWT e documentação via Swagger.</p>
+        <span class="scroll-link" data-target="detalhes-api">Ver mais detalhes ↓</span>
+      </div>
+
+      <div class="card">
+        <h3>Dashboard React</h3>
+        <p>Interface interativa de dashboard com React e Chart.js para visualização de dados em tempo real.</p>
+        <span class="scroll-link" data-target="detalhes-dashboard">Ver mais detalhes ↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 SITE PORTFÓLIO -->
+  <section id="detalhes-portfolio" class="detalhes">
+    <h3>🌐 Site Portfólio</h3>
+    <p>Um projeto pessoal desenvolvido com foco em design limpo, interatividade e responsividade, utilizando apenas <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong> puro.</p>
+
+    <h4>🧰 Tecnologias Utilizadas:</h4>
+    <ul>
+      <li>HTML5 e CSS3</li>
+      <li>JavaScript Vanilla para animações e interações</li>
+      <li>Responsividade via Flexbox e Grid</li>
+      <li>Design minimalista e gradientes modernos</li>
+    </ul>
+
+    <h4>🚀 Recursos Principais:</h4>
+    <ul>
+      <li>Animações suaves e efeitos de rolagem</li>
+      <li>Design moderno e limpo</li>
+      <li>Totalmente responsivo</li>
+      <li>Performance otimizada</li>
+    </ul>
+
+    <h4>🔗 Links do Projeto:</h4>
+    <p>
+      <a href="https://github.com/l30ur1n3/portfolio" target="_blank">Repositório no GitHub</a> |
+      <a href="https://seudominio.com" target="_blank">Acessar o site</a>
+    </p>
+  </section>
+
+  <!-- 🔹 API NODE.JS -->
+  <section id="detalhes-api" class="detalhes">
+    <h3>⚙️ API Node.js Completa</h3>
+    <p>Uma <strong>API RESTful</strong> segura e escalável, criada com <strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong> e autenticação <strong>JWT</strong>, documentada com <strong>Swagger</strong>.</p>
+
+    <h4>🧰 Tecnologias Utilizadas:</h4>
+    <ul>
+      <li>Node.js + Express</li>
+      <li>MongoDB + Mongoose</li>
+      <li>JWT + Bcrypt para autenticação</li>
+      <li>Swagger UI para documentação</li>
+    </ul>
+
+    <h4>🚀 Recursos Principais:</h4>
+    <ul>
+      <li>Autenticação segura</li>
+      <li>Cadastro e login de usuários</li>
+      <li>Rotas protegidas</li>
+      <li>Documentação interativa</li>
+    </ul>
+
+    <h4>🔗 Links do Projeto:</h4>
+    <p>
+      <a href="https://github.com/l30ur1n3/api-node" target="_blank">Repositório no GitHub</a> |
+      <a href="https://documentacaoapi.com" target="_blank">Swagger Online</a>
+    </p>
+  </section>
+
+  <!-- 🔹 DASHBOARD REACT -->
+  <section id="detalhes-dashboard" class="detalhes">
+    <h3>📊 Dashboard React</h3>
+    <p>Um painel interativo criado com <strong>React.js</strong> e <strong>Chart.js</strong> para exibir dados em tempo real e oferecer uma experiência visual profissional.</p>
+
+    <h4>🧰 Tecnologias Utilizadas:</h4>
+    <ul>
+      <li>React.js (Hooks, Context API)</li>
+      <li>Chart.js para gráficos dinâmicos</li>
+      <li>Styled Components</li>
+      <li>Integração com API REST</li>
+    </ul>
+
+    <h4>🚀 Recursos Principais:</h4>
+    <ul>
+      <li>Gráficos responsivos e animados</li>
+      <li>Dashboard dinâmico</li>
+      <li>Layout moderno (dark/light mode)</li>
+      <li>Performance otimizada</li>
+    </ul>
+
+    <h4>🔗 Links do Projeto:</h4>
+    <p>
+      <a href="https://github.com/l30ur1n3/dashboard-react" target="_blank">Repositório no GitHub</a> |
+      <a href="https://dashboardrodrigo.com" target="_blank">Visualizar Demo</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Rodrigo Bernardo — Desenvolvedor Full Stack
+  </footer>
+
+  <script>
+    // ===== EFEITO DE DIGITAÇÃO =====
+    const text = "Desenvolvedor Full Stack";
+    const typingElement = document.getElementById("typing");
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      } else {
+        typingElement.classList.add("typing");
+      }
+    }
+    window.onload = typeEffect;
+
+    // ===== ROLAGEM SUAVE E ANIMAÇÃO =====
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: target.offsetTop - 20,
+          behavior: "smooth"
+        });
+
+        setTimeout(() => {
+          target.classList.add("visible");
+        }, 400);
+      });
+    });
+  </script>
+</body>
+</html>
