@@ -7,7 +7,7 @@ Este projeto foi criado para apresentar minhas **habilidades, projetos e experi�
 
 ## ✨ Demonstração
 
-🔗 **Acesse o site:** [rodrigobernardo.dev](https://seudominio.com)  
+🔗 **Acesse o site:** [rodrigobernardo.dev](https://l30ur1n3.github.io/Site-portfolio/)  
 📱 **WhatsApp:** [Clique aqui para conversar](https://w.app/g9p0r1)  
 💼 **LinkedIn:** [Rodrigo Bernardo](https://www.linkedin.com/in/rodrigo-bernardo-7a9b30195/)  
 💻 **GitHub:** [l30ur1n3](https://github.com/l30ur1n3)
@@ -58,5 +58,5 @@ Painel administrativo interativo com gráficos dinâmicos e integração com API
 
 ---
 
-## 🧰 Estrutura do Projeto
+
 
